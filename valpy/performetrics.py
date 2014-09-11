@@ -8,7 +8,7 @@ import pandas as pd
 from scipy import stats
 import random
 
-
+"""Not working right now: removing until we can program a workable version
 def h(snpTrueFalse, scoreColumn):
 	n = float(len(scoreColumn))
 	n1 = float(sum(snpTrueFalse))
@@ -23,7 +23,7 @@ def h(snpTrueFalse, scoreColumn):
 		sc.append(scoreColumn[zord[count]])
 		count += 1
 	sc = pd.Series(sc)
-
+"""
 
 def rmse(betaColumn, betaTrueFalse):
 	betaColumn = np.array(betaColumn)
