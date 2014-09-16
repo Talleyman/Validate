@@ -29,7 +29,6 @@ def usage():
 	print "--Snp or -S to specify a string for the name of the SNP column in results file (required)"
 	print "--Score or -P to specify a string for the name of the scoring column in results file (e.g., p-value; required)"
 	print "--beta or -b to specify a string for the name of the estimated SNP effect column in results file"
-	print "--severity or -y to specify a severity ratio to use in calculating the H-measure (recommended 1 or pi1/pi0)"
 	print "--filename or -f to specify the desired filename for the Validate output file"
 	print "--threshold ir -t to specify a desired threshold for classification performetrics where necessary"
 	print "--seper or -s to specify either whitespace or comma"
@@ -43,7 +42,7 @@ def checkArgs():
 	try:
 		opts, args = getopt.getopt(sys.argv[1:], shortopts="vha:F:C:S:P:b:y:f:t:s:k:r", longopts=["verbose", "help", 
 			"analysis=", "Folder=", "Class=", "Snp=", "Score=", "beta=", "filename=", "threshold=", "seper=", "kttype=",
-			"kttypeseper=", "severity="])
+			"kttypeseper="])
 
 	except getopt.GetoptError as err:
 		print(err)
@@ -113,11 +112,7 @@ def checkArgs():
 			kttypeseper = str(o[1])
 			if verbose:
 				print "Known-truth data format delimination is set as", kttypeseper
-		if o[1] in ("--severity", "-y"):
-			severity = float(o[1])
-			if verbose:
-				print "Severity ratio is specified at", severity
-
+				
 	# Check to see if needed variables are defined
 	try:
 		folder
@@ -150,10 +145,4 @@ def checkArgs():
 	except NameError:
 		beta = None
 
-	# Setting severity equal to null if not used
-	try:
-		severity
-	except NameError:
-		severity = None
-
-	return folder, analysis, truth, snp, score, beta, filename, threshold, seper, kttype, kttypeseper, severity
+	return folder, analysis, truth, snp, score, beta, filename, threshold, seper, kttype, kttypeseper
