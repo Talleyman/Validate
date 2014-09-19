@@ -14,7 +14,7 @@ import numpy as np
 """Main function and execution"""
 def main():
 	initializeGraphics()
-	folder, analysis, truth, snp, score, beta, filename, threshold, seper, kttype, kttypeseper, severity = checkArgs()
+	folder, analysis, truth, snp, score, beta, filename, threshold, seper, kttype, kttypeseper = checkArgs()
 	appOutputList = checkList(getList(folder))
 	ktFile = loadKT(truth, kttypeseper)
 
@@ -49,9 +49,6 @@ def main():
 				else:
 					betaTrueFalse.append(float(0))
 				count += 1
-
-		if severity is None:
-			severity = float(len(ktSnps))/float(len(snpTrueFalse) - len(ktSnps))
 
 	firstForHeader = True
 	for each in appOutputList:
