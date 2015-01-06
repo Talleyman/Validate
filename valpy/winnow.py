@@ -1,4 +1,4 @@
-# ValPy -- Validate.R in Python
+# ValPy -- Winnow.R in Python
 # Author: Dustin Landers
 # Contact: (770 289-8830 :: dustin.landers@gmail.com
 
