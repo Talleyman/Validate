@@ -1,5 +1,5 @@
 """ 
-Functions for indentifying and using the command-line to execute Validate for Python
+Functions for indentifying and using the command-line to execute Winnow for Python
 """
 
 
@@ -11,7 +11,7 @@ import getopt, sys
 def initializeGraphics():
 	print "###################################################################"
 	print "###                                                            ####"
-	print "###      Validate for Python!                                  ####"
+	print "###      Winnow for Python!                                    ####"
 	print "###      By Dustin A. Landers                                  ####"
 	print "###      Contact: (770) 289-8830 -- dustin.landers@gmail.com   ####"
 	print "###                                                            ####"
