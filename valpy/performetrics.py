@@ -1,5 +1,5 @@
 """
-Performance measures for testing applications in Validate
+Performance measures for testing applications in Winnow
 """
 
 
@@ -8,7 +8,7 @@ import pandas as pd
 from scipy import stats
 import random
 
-"""Not working right now: removing until we can program a workable version
+"""Not working right now: commenting out until we can program a workable version
 def h(snpTrueFalse, scoreColumn):
 	n = float(len(scoreColumn))
 	n1 = float(sum(snpTrueFalse))
